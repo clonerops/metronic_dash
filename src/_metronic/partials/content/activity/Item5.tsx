@@ -38,13 +38,13 @@ const Item5: FC = () => {
         <div className='overflow-auto pb-5'>
           <div className='d-flex align-items-center border border-dashed border-gray-300 rounded min-w-700px p-7'>
             <div className='overlay me-10'>
-              <div className='overlay-wrapper'>
+              {/* <div className='overlay-wrapper'>
                 <img
                   alt='img'
                   className='rounded w-200px'
                   src={toAbsoluteUrl('/media/demos/demo1.png')}
                 />
-              </div>
+              </div> */}
 
               <div className='overlay-layer bg-dark bg-opacity-10 rounded'>
                 <a href='#' className='btn btn-sm btn-primary btn-shadow'>
@@ -54,13 +54,13 @@ const Item5: FC = () => {
             </div>
 
             <div className='overlay me-10'>
-              <div className='overlay-wrapper'>
+              {/* <div className='overlay-wrapper'>
                 <img
                   alt='img'
                   className='rounded w-200px'
                   src={toAbsoluteUrl('/media/demos/demo2.png')}
                 />
-              </div>
+              </div> */}
 
               <div className='overlay-layer bg-dark bg-opacity-10 rounded'>
                 <a href='#' className='btn btn-sm btn-primary btn-shadow'>
@@ -70,13 +70,13 @@ const Item5: FC = () => {
             </div>
 
             <div className='overlay'>
-              <div className='overlay-wrapper'>
+              {/* <div className='overlay-wrapper'>
                 <img
                   alt='img'
                   className='rounded w-200px'
                   src={toAbsoluteUrl('/media/demos/demo3.png')}
                 />
-              </div>
+              </div> */}
 
               <div className='overlay-layer bg-dark bg-opacity-10 rounded'>
                 <a href='#' className='btn btn-sm btn-primary btn-shadow'>

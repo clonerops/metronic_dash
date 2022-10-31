@@ -2,8 +2,7 @@ import {createRoot} from 'react-dom/client'
 // Axios
 import axios from 'axios'
 import {Chart, registerables} from 'chart.js'
-import {QueryClient, QueryClientProvider} from 'react-query'
-import {ReactQueryDevtools} from 'react-query/devtools'
+// import {QueryClient, QueryClientProvider} from 'react-query'
 // Apps
 import {MetronicI18nProvider} from './_metronic/i18n/Metronici18n'
 /**
@@ -31,17 +30,15 @@ import {AuthProvider, setupAxios} from './app/modules/auth'
 setupAxios(axios)
 Chart.register(...registerables)
 
-const queryClient = new QueryClient()
 const container = document.getElementById('root')
 if (container) {
   createRoot(container).render(
-    <QueryClientProvider client={queryClient}>
+    // <QueryClientProvider client={queryClient}>
       <MetronicI18nProvider>
         <AuthProvider>
           <AppRoutes />
         </AuthProvider>
       </MetronicI18nProvider>
-      <ReactQueryDevtools initialIsOpen={false} />
-    </QueryClientProvider>
+    // </QueryClientProvider>
   )
 }

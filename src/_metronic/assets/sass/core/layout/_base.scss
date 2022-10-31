@@ -2,8 +2,14 @@
 // Root
 //
 
+@font-face {
+    font-family: Yekan;
+    src: url('../../../fonts/Yekan.ttf');
+    font-style: normal;
+}
+
 html {
-  font-family: sans-serif;
+  font-family: Yekan;
   text-size-adjust: 100%;
 }
 
@@ -16,7 +22,7 @@ body {
     -moz-osx-font-smoothing: grayscale;
     font-size: $root-font-size !important;
     font-weight: $font-weight-base;
-    font-family: $font-family-sans-serif;
+    font-family: Yekan;
 
     // Tablet mode
     @include media-breakpoint-down(lg) {
