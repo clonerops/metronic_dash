@@ -17,11 +17,11 @@ const Navbar = () => {
         <Search />
       </div>
 
-      <div className={clsx('app-navbar-item', itemClass)}>
+      {/* <div className={clsx('app-navbar-item', itemClass)}>
         <div id='kt_activities_toggle' className={btnClass}>
           <KTSVG path='/media/icons/duotune/general/gen032.svg' className={btnIconClass} />
         </div>
-      </div>
+      </div> */}
 
       <div className={clsx('app-navbar-item', itemClass)}>
         <div
