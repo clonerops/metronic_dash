@@ -67,7 +67,7 @@ export function Login() {
 
       {/* begin::Separator */}
       <div className='separator separator-content my-14'>
-        <span className='w-125px text-gray-500 fw-semibold fs-7'>ورود با حساب کاربری</span>
+        <span className='w-150px text-gray-500 fw-semibold fs-7'>ورود با حساب کاربری</span>
       </div>
       {/* end::Separator */}
 
@@ -145,7 +145,7 @@ export function Login() {
           {!loading && <span className='indicator-label'>ادامه</span>}
           {loading && (
             <span className='indicator-progress' style={{display: 'block'}}>
-              Please wait...
+              درحال پردازش...
               <span className='spinner-border spinner-border-sm align-middle ms-2'></span>
             </span>
           )}
