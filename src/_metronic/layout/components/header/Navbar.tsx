@@ -23,7 +23,7 @@ const Navbar = () => {
         </div>
       </div> */}
 
-      <div className={clsx('app-navbar-item', itemClass)}>
+      {/* <div className={clsx('app-navbar-item', itemClass)}>
         <div
           data-kt-menu-trigger="{default: 'click'}"
           data-kt-menu-attach='parent'
@@ -33,7 +33,7 @@ const Navbar = () => {
           <KTSVG path='/media/icons/duotune/general/gen022.svg' className={btnIconClass} />
         </div>
         <HeaderNotificationsMenu />
-      </div>
+      </div> */}
 
       <div className={clsx('app-navbar-item', itemClass)}>
         <div className={clsx('position-relative', btnClass)} id='kt_drawer_chat_toggle'>
