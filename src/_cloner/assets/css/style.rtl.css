@@ -48,10 +48,10 @@
   --bs-black-rgb: 0, 0, 0;
   --bs-body-color-rgb: 24, 28, 50;
   --bs-body-bg-rgb: 255, 255, 255;
-  --bs-font-sans-serif: Inter, Helvetica, Vazir;
+  --bs-font-sans-serif: Inter, Helvetica, VazirThin;
   --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
-  --bs-body-font-family: Vazir;
+  --bs-body-font-family: VazirThin;
   --bs-body-font-size: 1rem;
   --bs-body-font-weight: 400;
   --bs-body-line-height: 1.5;
@@ -72,15 +72,6 @@
   --bs-code-color: #b93993;
   --bs-highlight-bg: #fff3cd;
 }
-
-
-@font-face {
-  font-family: Vazir;
-  src: url('../fonts/Vazir-Thin.ttf');
-  font-style: normal;
-  /* font-size: .5rem; */
-}
-
 
 *,
 *::before,
@@ -6112,7 +6103,7 @@ textarea.form-control-lg {
   display: block;
   padding: var(--bs-tooltip-arrow-height);
   margin: var(--bs-tooltip-margin);
-  font-family: Vazir;
+  font-family: VazirThin;
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -6214,7 +6205,7 @@ textarea.form-control-lg {
   z-index: var(--bs-popover-zindex);
   display: block;
   max-width: var(--bs-popover-max-width);
-  font-family:Vazir;
+  font-family:VazirThin;
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -50222,7 +50213,7 @@ body[data-kt-sticky-landing-header=on] {
 }
 
 html {
-  font-family: Vazir;
+  font-family: VazirThinThin;
   text-size-adjust: 100%;
 }
 
@@ -50235,7 +50226,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   font-size: 13px !important;
   font-weight: 400;
-  font-family: Vazir;
+  font-family: VazirThin;
 }
 @media (max-width: 991.98px) {
   html,

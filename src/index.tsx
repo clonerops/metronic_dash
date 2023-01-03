@@ -14,6 +14,7 @@ import {MetronicI18nProvider} from './_cloner/i18n/Metronici18n'
 // import './_cloner/assets/sass/plugins.scss'
 import './_cloner/assets/css/style.rtl.css'
 import './_cloner/assets/sass/style.react.scss'
+import './_cloner/assets/css/tailwind.css'
 import {AppRoutes} from './app/routing/AppRoutes'
 import {AuthProvider, setupAxios} from './app/modules/auth'
 /**

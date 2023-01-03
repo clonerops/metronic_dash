@@ -4,7 +4,15 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        "Vazir": ["Vazir"],
+        "VazirBold": ["VazirBold"],
+        "VazirLight": ["VazirLight"],
+        "VazirMedium": ["VazirMedium"],
+        "VazirUltraLight": ["VazirUltraLight"],
+      },
+    },
   },
   plugins: [],
 }
