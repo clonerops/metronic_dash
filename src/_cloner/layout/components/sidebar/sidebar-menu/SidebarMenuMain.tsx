@@ -1,22 +1,25 @@
 /* eslint-disable react/jsx-no-target-blank */
-// import {useIntl} from 'react-intl'
+
+import { SidebarMenuItem } from "./SidebarMenuItem"
+
+import {useIntl} from 'react-intl'
 const SidebarMenuMain = () => {
-  // const intl = useIntl()
+  const intl = useIntl()
 
   return (
     <>
-      {/* <SidebarMenuItem
+      <SidebarMenuItem
         to='/dashboard'
         icon='/media/icons/duotune/art/art002.svg'
-        title={intl.formatMessage({id: 'MENU.DASHBOARD'})}
+        title='اتصال به مرکز تماس'
         fontIcon='bi-app-indicator'
-      /> */}
-      {/* <SidebarMenuItem
-        to='/builder'
+      />
+      <SidebarMenuItem
+        to='/CustomerCallRegistration'
         icon='/media/icons/duotune/general/gen019.svg'
-        title='Layout Builder'
+        title='ثبت تماس مشتری'
         fontIcon='bi-layers'
-      /> */}
+      />
       {/* <div className='menu-item'>
         <div className='menu-content pt-8 pb-2'>
           <span className='menu-section text-muted text-uppercase fs-8 ls-1'>Crafted</span>

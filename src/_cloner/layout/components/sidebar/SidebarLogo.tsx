@@ -42,7 +42,7 @@ const SidebarLogo = () => {
 
         <img
           alt='Logo'
-          src={toAbsoluteUrl('/media/logos/default-small.svg')}
+          src={toAbsoluteUrl('/media/logos/saipa-logo.png')}
           className='h-20px app-sidebar-logo-minimize'
         />
       </Link>
