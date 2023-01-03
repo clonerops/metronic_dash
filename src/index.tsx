@@ -4,16 +4,16 @@ import axios from 'axios'
 import {Chart, registerables} from 'chart.js'
 // import {QueryClient, QueryClientProvider} from 'react-query'
 // Apps
-import {MetronicI18nProvider} from './_metronic/i18n/Metronici18n'
+import {MetronicI18nProvider} from './_cloner/i18n/Metronici18n'
 /**
  * TIP: Replace this style import with rtl styles to enable rtl mode
  *
- * import './_metronic/assets/css/style.rtl.css'
+ * import './_cloner/assets/css/style.rtl.css'
  **/
-// import './_metronic/assets/sass/style.scss'
-// import './_metronic/assets/sass/plugins.scss'
-import './_metronic/assets/css/style.rtl.css'
-import './_metronic/assets/sass/style.react.scss'
+// import './_cloner/assets/sass/style.scss'
+// import './_cloner/assets/sass/plugins.scss'
+import './_cloner/assets/css/style.rtl.css'
+import './_cloner/assets/sass/style.react.scss'
 import {AppRoutes} from './app/routing/AppRoutes'
 import {AuthProvider, setupAxios} from './app/modules/auth'
 /**

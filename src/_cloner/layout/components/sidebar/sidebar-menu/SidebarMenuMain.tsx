@@ -1,12 +1,7 @@
 /* eslint-disable react/jsx-no-target-blank */
-import React from 'react'
-import {useIntl} from 'react-intl'
-import {KTSVG} from '../../../../helpers'
-import {SidebarMenuItemWithSub} from './SidebarMenuItemWithSub'
-import {SidebarMenuItem} from './SidebarMenuItem'
-
+// import {useIntl} from 'react-intl'
 const SidebarMenuMain = () => {
-  const intl = useIntl()
+  // const intl = useIntl()
 
   return (
     <>

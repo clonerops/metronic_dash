@@ -1,6 +1,6 @@
 import React from 'react'
 import {Navigate, Route, Routes, Outlet} from 'react-router-dom'
-import {PageLink, PageTitle} from '../../../_metronic/layout/core'
+import {PageLink, PageTitle} from '../../../_cloner/layout/core'
 import {Settings} from './components/settings/Settings'
 import {AccountHeader} from './AccountHeader'
 
