@@ -16,7 +16,7 @@ const Modal: FC<IProps> = ({children, showModal, setShowModal}) => {
               className='fixed inset-0 h-full w-full bg-black opacity-40'
               onClick={() => setShowModal(false)}
             ></div>
-            <div className='flex min-h-screen items-center px-4 py-8'>
+            <div className='flex max-h-screen items-center px-4 py-8'>
               <div className='relative mx-auto w-full max-w-lg rounded-md bg-white p-4 shadow-lg'>
                 {children}
               </div>

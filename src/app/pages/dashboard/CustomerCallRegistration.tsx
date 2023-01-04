@@ -1,9 +1,11 @@
 import {useState} from 'react'
+import Dialog from '../../../_cloner/helpers/components/Dialog'
 import Modal from '../../../_cloner/helpers/components/Modal'
 import ActionButton from '../../../_cloner/helpers/components/Modules/ActionButton'
 import InputAndLabel from '../../../_cloner/helpers/components/Modules/InputAndLabel'
 import SelectAndLabel from '../../../_cloner/helpers/components/Modules/SelectAndLabel'
 import TextareaAndInput from '../../../_cloner/helpers/components/Modules/TextareaAndInput'
+import {TablesWidget} from '../../../_cloner/helpers/components/TablesWidget'
 import {Card5} from '../../../_cloner/partials/content/cards/Card5'
 
 const CustomerCallRegistration = () => {
@@ -28,7 +30,10 @@ const CustomerCallRegistration = () => {
         <section>
           <SelectAndLabel title='موضوع تماس' />
         </section>
-        <form className='grid w-full grid-cols-2 md:grid-cols-3' onSubmit={(e) => SearchCustomer(e)}>
+        <form
+          className='grid w-full grid-cols-2 md:grid-cols-3'
+          onSubmit={(e) => SearchCustomer(e)}
+        >
           <section className='flex flex-col'>
             <InputAndLabel title='کدملی' />
           </section>
@@ -38,8 +43,8 @@ const CustomerCallRegistration = () => {
           <section className='flex flex-col'>
             <InputAndLabel title='شماره شاسی' />
           </section>
-          <section className='flex flex-col'/>
-          <section className='flex flex-col'/>
+          <section className='flex flex-col' />
+          <section className='flex flex-col' />
           <section className='flex flex-col'>
             <ActionButton title='جستجو' />
           </section>
@@ -78,7 +83,7 @@ const CustomerCallRegistration = () => {
         <div className='col-sm-6 col-xl-8'>
           <Card5 image='/media/svg/brand-logos/twitch.svg' title='اطلاعات خودرو'>
             <form className='container grid grid-cols-1 md:grid-cols-2'>
-              <section className='flex justify-between flex-col'>
+              <section className='flex flex-col justify-between'>
                 <InputAndLabel title='شماره شاسی' />
               </section>
               <section className='flex flex-col'>
@@ -97,7 +102,7 @@ const CustomerCallRegistration = () => {
                 <InputAndLabel title='رنگ خودرو' />
               </section>
               <section className='flex flex-col'>
-                <InputAndLabel title='کیلومتر' />
+                <InputAndLabel title='کیلومتر' required />
               </section>
               <section className='flex flex-col'>
                 <InputAndLabel title='شرکت سازنده' />
@@ -117,9 +122,12 @@ const CustomerCallRegistration = () => {
         </div>
       </div>
       {/* Customer Information End */}
-
+      {/* <Dialog>
+        <TablesWidget title='خودروها' />
+        <TablesWidget title='خودروها' />
+      </Dialog> */}
       <Modal showModal={showModal} setShowModal={setShowModal}>
-        Hello world
+        <TablesWidget title='خودروها' />
       </Modal>
     </>
   )

@@ -1,16 +1,18 @@
 import { FC } from "react";
 
 interface IProps {
-    title: string;
-    defaultValue?: string;
-    disable?: boolean;
+    title: string
+    defaultValue?: string
+    disable?: boolean
+    required?: boolean
+
 }
 
-const InputAndLabel: FC<IProps> = ({ title, defaultValue, disable }) => {
+const InputAndLabel: FC<IProps> = ({ title, defaultValue, disable, required }) => {
     return (
-        <section className="flex items-center p-2">
+        <section className="flex items-center p-1 py-2">
             <label className="inline-block w-[150px] pl-2 text-left font-IRANSans text-md">
-                {title}:
+               {title}: {required && <span className="text-red-600">*</span>}
             </label>
             <input
                 type="text"
