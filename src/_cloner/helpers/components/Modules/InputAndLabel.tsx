@@ -16,7 +16,7 @@ const InputAndLabel: FC<IProps> = ({ title, defaultValue, disable }) => {
                 type="text"
                 disabled={disable}
                 defaultValue={defaultValue}
-                className="bg-transparent m-0 inline-block w-[20rem] rounded-md border border-gray-400 p-2 font-IRANSans text-lg outline-none"
+                className="bg-transparent m-0 inline-block w-[14rem] rounded-md border border-gray-400 p-2 font-IRANSans text-lg outline-none"
             />
         </section>
     );

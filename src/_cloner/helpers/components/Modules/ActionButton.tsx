@@ -14,7 +14,7 @@ const ActionButton: FC<IProps> = ({title}) => {
       <input
         type='submit'
         value='جستجو'
-        className='font-IRANSans text-white bg-indigo-500 float-left m-0 inline-block w-[20rem] rounded-md border border-gray-400 p-2 text-lg outline-none'
+        className='font-IRANSans float-left m-0 inline-block w-[14rem] rounded-md border border-gray-400 bg-indigo-500 p-2 text-lg text-white outline-none'
       />
     </section>
   )

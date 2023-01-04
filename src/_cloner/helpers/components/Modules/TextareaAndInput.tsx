@@ -9,7 +9,7 @@ interface IProps {
 const TextareaAndInput: FC<IProps> = ({ title, defaultValue, disable }) => {
     return (
         <section className="row-span-2 flex items-center justify-around p-2">
-            <label className="inline-block w-[150px] text-left pl-2 font-IRANSans text-xl">
+            <label className="inline-block w-[60px] text-left pl-2 font-IRANSans text-md">
                 {title}:
             </label>
             <textarea

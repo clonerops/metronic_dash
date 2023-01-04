@@ -4,7 +4,6 @@ import ActionButton from '../../../_cloner/helpers/components/Modules/ActionButt
 import InputAndLabel from '../../../_cloner/helpers/components/Modules/InputAndLabel'
 import SelectAndLabel from '../../../_cloner/helpers/components/Modules/SelectAndLabel'
 import TextareaAndInput from '../../../_cloner/helpers/components/Modules/TextareaAndInput'
-import {TablesWidget} from '../../../_cloner/helpers/components/TablesWidget'
 import {Card5} from '../../../_cloner/partials/content/cards/Card5'
 
 const CustomerCallRegistration = () => {
@@ -29,7 +28,7 @@ const CustomerCallRegistration = () => {
         <section>
           <SelectAndLabel title='موضوع تماس' />
         </section>
-        <form className='grid w-full grid-cols-2' onSubmit={(e) => SearchCustomer(e)}>
+        <form className='grid w-full grid-cols-2 md:grid-cols-3' onSubmit={(e) => SearchCustomer(e)}>
           <section className='flex flex-col'>
             <InputAndLabel title='کدملی' />
           </section>
@@ -39,6 +38,8 @@ const CustomerCallRegistration = () => {
           <section className='flex flex-col'>
             <InputAndLabel title='شماره شاسی' />
           </section>
+          <section className='flex flex-col'/>
+          <section className='flex flex-col'/>
           <section className='flex flex-col'>
             <ActionButton title='جستجو' />
           </section>
@@ -46,12 +47,12 @@ const CustomerCallRegistration = () => {
         {/* Call Registration Action End */}
       </div>
       {/* Customer Information Begin */}
-      <div className='row g-6 g-xl-9 mt-5'>
-        <div className='col-sm-6 col-xl-6'>
+      <div className='row g-6 g-xl-2 mt-5'>
+        <div className='col-sm-6 col-xl-4'>
           <Card5 image='/media/svg/brand-logos/aven.svg' title='اطلاعات مشتری'>
-            <section className='container grid grid-cols-1'>
+            <form className='container grid grid-cols-1'>
               <section className='flex flex-col'>
-                <InputAndLabel title='نام و نام خانوادگی' />
+                <InputAndLabel title='نام' />
               </section>
               <section className='flex flex-col'>
                 <InputAndLabel title='کدملی' />
@@ -71,15 +72,47 @@ const CustomerCallRegistration = () => {
               <section className='flex flex-col'>
                 <TextareaAndInput title='توضیحات' />
               </section>
-              {/* <section className='flex flex-col'>
-                <InputAndLabel title='نام و نام خانوادگی' />
-              </section> */}
-            </section>
+            </form>
           </Card5>
         </div>
-        <div className='col-sm-6 col-xl-6'>
+        <div className='col-sm-6 col-xl-8'>
           <Card5 image='/media/svg/brand-logos/twitch.svg' title='اطلاعات خودرو'>
-            Hello
+            <form className='container grid grid-cols-1 md:grid-cols-2'>
+              <section className='flex justify-between flex-col'>
+                <InputAndLabel title='شماره شاسی' />
+              </section>
+              <section className='flex flex-col'>
+                <InputAndLabel title='شماره موتور' />
+              </section>
+              <section className='flex flex-col'>
+                <InputAndLabel title='شماره پذیرش' />
+              </section>
+              <section className='flex flex-col'>
+                <InputAndLabel title='نوع خودرو' />
+              </section>
+              <section className='flex flex-col'>
+                <InputAndLabel title='مدل خودرو' />
+              </section>
+              <section className='flex flex-col'>
+                <InputAndLabel title='رنگ خودرو' />
+              </section>
+              <section className='flex flex-col'>
+                <InputAndLabel title='کیلومتر' />
+              </section>
+              <section className='flex flex-col'>
+                <InputAndLabel title='شرکت سازنده' />
+              </section>
+              <section className='flex flex-col'>
+                <InputAndLabel title='تاریخ شروع گارانتی' />
+              </section>
+              <section className='flex flex-col'>
+                <InputAndLabel title='بسته خدمت' />
+              </section>
+              <section className='flex flex-col' />
+              <section className='flex flex-col'>
+                <ActionButton title='جستجو' />
+              </section>
+            </form>
           </Card5>
         </div>
       </div>
