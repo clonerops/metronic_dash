@@ -15,7 +15,7 @@ const TextareaAndInput: FC<IProps> = ({ title, defaultValue, disable }) => {
             <textarea
                 disabled={disable}
                 defaultValue={defaultValue}
-                className="inline-block w-full rounded-md border border-gray-400 p-2 font-IRANSans text-lg outline-none"
+                className="bg-transparent inline-block w-full rounded-md border border-gray-400 p-2 font-IRANSans text-lg outline-none"
             />
         </section>
     );

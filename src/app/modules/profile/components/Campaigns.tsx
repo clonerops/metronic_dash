@@ -1,14 +1,13 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React from 'react'
 import {Card5} from '../../../../_cloner/partials/content/cards/Card5'
 
 export function Campaigns() {
   return (
     <>
-      <div className='d-flex flex-wrap flex-stack mb-6'>
+      <div className='d-flex flex-stack mb-6 flex-wrap'>
         <h3 className='fw-bolder my-2'>
           My Campaigns
-          <span className='fs-6 text-gray-400 fw-bold ms-1'>30 Days</span>
+          <span className='fs-6 fw-bold ms-1 text-gray-400'>30 Days</span>
         </h3>
 
         <div className='d-flex align-items-center my-2'>
@@ -34,100 +33,44 @@ export function Campaigns() {
 
       <div className='row g-6 g-xl-9'>
         <div className='col-sm-6 col-xl-4'>
-          <Card5
-            image='/media/svg/brand-logos/twitch.svg'
-            title='Twitch Posts'
-            description='$500.00'
-            status='down'
-            statusValue={40.5}
-            statusDesc='more impressions'
-            progress={0.5}
-            progressType='MRR'
-          />
+          <Card5 image='/media/svg/brand-logos/twitch.svg' title='Twitch Posts'>
+            Hello
+          </Card5>
         </div>
         <div className='col-sm-6 col-xl-4'>
-          <Card5
-            image='/media/svg/brand-logos/twitter.svg'
-            title='Twitter Followers'
-            description='807k'
-            status='up'
-            statusValue={17.62}
-            statusDesc='Followers growth'
-            progress={5}
-            progressType='New trials'
-          />
+          <Card5 image='/media/svg/brand-logos/twitch.svg' title='Twitch Posts'>
+            Hello
+          </Card5>
         </div>
         <div className='col-sm-6 col-xl-4'>
-          <Card5
-            image='/media/svg/brand-logos/spotify.svg'
-            title='Spotify Listeners'
-            description='1,073'
-            status='down'
-            statusValue={10.45}
-            statusDesc='Less comments than usual'
-            progress={40}
-            progressType='Impressions'
-          />
+          <Card5 image='/media/svg/brand-logos/twitch.svg' title='Twitch Posts'>
+            Hello
+          </Card5>
         </div>
         <div className='col-sm-6 col-xl-4'>
-          <Card5
-            image='/media/svg/brand-logos/pinterest-p.svg'
-            title='Pinterest Posts'
-            description='97'
-            status='up'
-            statusValue={26.1}
-            statusDesc='More posts'
-            progress={10}
-            progressType='Spend'
-          />
+          <Card5 image='/media/svg/brand-logos/twitch.svg' title='Twitch Posts'>
+            Hello
+          </Card5>
         </div>
         <div className='col-sm-6 col-xl-4'>
-          <Card5
-            image='/media/svg/brand-logos/github.svg'
-            title='Github Contributes'
-            description='4,109'
-            status='down'
-            statusValue={32.8}
-            statusDesc='Less contributions'
-            progress={40}
-            progressType='Dispute'
-          />
+          <Card5 image='/media/svg/brand-logos/twitch.svg' title='Twitch Posts'>
+            Hello
+          </Card5>
         </div>
         <div className='col-sm-6 col-xl-4'>
-          <Card5
-            image='/media/svg/brand-logos/youtube-play.svg'
-            title='Youtube Subscribers'
-            description='354'
-            status='up'
-            statusValue={29.45}
-            statusDesc='Subscribers growth'
-            progress={40}
-            progressType='Subscribers'
-          />
+          <Card5 image='/media/svg/brand-logos/twitch.svg' title='Twitch Posts'>
+            Hello
+          </Card5>
         </div>
         <div className='col-sm-6 col-xl-4'>
-          <Card5
-            image='/media/svg/brand-logos/telegram.svg'
-            title='Telegram Posts'
-            description='566'
-            status='up'
-            statusValue={11.4}
-            statusDesc='more clicks'
-            progress={40}
-            progressType='Profit'
-          />
+          <Card5 image='/media/svg/brand-logos/twitch.svg' title='Twitch Posts'>
+            Hello
+          </Card5>
         </div>
         <div className='col-sm-6 col-xl-4'>
-          <Card5
-            image='/media/svg/brand-logos/reddit.svg'
-            title='Reddit Awards'
-            description='2.1M'
-            status='up'
-            statusValue={46.7}
-            statusDesc='more adds'
-            progress={0.0}
-            progressType='Retention'
-          />
+          <Card5 image='/media/svg/brand-logos/twitch.svg' title='Twitch Posts'>
+            Hello
+          </Card5>
         </div>
       </div>
 
