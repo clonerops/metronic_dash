@@ -2,7 +2,7 @@
 import {FC} from 'react'
 import {Link} from 'react-router-dom'
 import {useAuth} from '../../../../app/modules/auth'
-import {Languages} from './Languages'
+// import {Languages} from './Languages'
 import {toAbsoluteUrl} from '../../../helpers'
 
 const HeaderUserMenu: FC = () => {
@@ -23,7 +23,7 @@ const HeaderUserMenu: FC = () => {
             <div className='fw-bolder d-flex align-items-center fs-5'>
               {/* {currentUser?.first_name} {currentUser?.first_name} */}
               ابوالفضل معصومی
-              <span className='badge badge-light-success fw-bolder fs-8 px-2 py-1 ms-2'>Pro</span>
+              <span className='badge badge-light-success fw-bolder fs-8 px-2 py-1 ms-2'>آنلاین</span>
             </div>
             <a href='#' className='fw-bold text-muted text-hover-primary fs-7'>
               توسعه دهنده 
@@ -117,7 +117,7 @@ const HeaderUserMenu: FC = () => {
 
       {/* <div className='separator my-2'></div> */}
 
-      <Languages />
+      {/* <Languages /> */}
 
       {/* <div className='menu-item px-5 my-1'>
         <Link to='/crafted/account/settings' className='menu-link px-5'>

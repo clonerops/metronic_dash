@@ -7,14 +7,10 @@ import SelectAndLabel from '../../../_cloner/helpers/components/Modules/SelectAn
 import TextareaAndInput from '../../../_cloner/helpers/components/Modules/TextareaAndInput'
 import {TablesWidget} from '../../../_cloner/helpers/components/TablesWidget'
 import {Card5} from '../../../_cloner/partials/content/cards/Card5'
-
-const initialValue = {
-  nationalcode: '',
-}
+import initialValue from '../../../_cloner/helpers/value-helper/customer-registration.json'
 
 const CustomerCallRegistration = () => {
   const [showModal, setShowModal] = useState<boolean>(false)
-  // const [loading, setLoading] = useState(false)
 
   // Handle Value From Inputs
   const [values, setValues] = useState(initialValue)
@@ -35,11 +31,10 @@ const CustomerCallRegistration = () => {
     <>
       <div className='card container p-5 shadow-lg'>
         {/* Customer Call Number */}
-        <section className='flex items-center justify-start'>
+        <section className='flex items-center justify-start py-5'>
           <label className='px-2'>شماره تماس گیرنده:</label>
           <h4 className='px-2 font-VazirBold'>09197563415</h4>
         </section>
-
         {/* Call Registration Action Begin */}
         <section>
           <SelectAndLabel title='موضوع تماس' />
