@@ -2,9 +2,9 @@
 
 import { SidebarMenuItem } from "./SidebarMenuItem"
 
-import {useIntl} from 'react-intl'
+// import {useIntl} from 'react-intl'
 const SidebarMenuMain = () => {
-  const intl = useIntl()
+  // const intl = useIntl()
 
   return (
     <>

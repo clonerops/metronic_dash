@@ -1,5 +1,5 @@
 import {useState} from 'react'
-import Dialog from '../../../_cloner/helpers/components/Dialog'
+// import Dialog from '../../../_cloner/helpers/components/Dialog'
 import Modal from '../../../_cloner/helpers/components/Modal'
 import ActionButton from '../../../_cloner/helpers/components/Modules/ActionButton'
 import InputAndLabel from '../../../_cloner/helpers/components/Modules/InputAndLabel'
@@ -8,13 +8,27 @@ import TextareaAndInput from '../../../_cloner/helpers/components/Modules/Textar
 import {TablesWidget} from '../../../_cloner/helpers/components/TablesWidget'
 import {Card5} from '../../../_cloner/partials/content/cards/Card5'
 
+const initialValue = {
+  nationalcode: '',
+}
+
 const CustomerCallRegistration = () => {
   const [showModal, setShowModal] = useState<boolean>(false)
-  const [loading, setLoading] = useState(false)
+  // const [loading, setLoading] = useState(false)
+
+  // Handle Value From Inputs
+  const [values, setValues] = useState(initialValue)
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setValues({
+      ...values,
+      [e.target.name]: e.target.value,
+    })
+  }
 
   const SearchCustomer = (e: React.SyntheticEvent<EventTarget>): void => {
     e.preventDefault()
-    setShowModal(true)
+    console.log(values.nationalcode)
+    // setShowModal(true)
   }
 
   return (
@@ -35,7 +49,12 @@ const CustomerCallRegistration = () => {
           onSubmit={(e) => SearchCustomer(e)}
         >
           <section className='flex flex-col'>
-            <InputAndLabel title='کدملی' />
+            <InputAndLabel
+              name='nationalcode'
+              title='کدملی'
+              valueData={values.nationalcode}
+              onChangeData={handleChange}
+            />
           </section>
           <section className='flex flex-col'>
             <InputAndLabel title='شماره پذیرش' />
