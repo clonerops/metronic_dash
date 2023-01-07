@@ -9,7 +9,7 @@ const SidebarMenuMain = () => {
   return (
     <>
       <SidebarMenuItem
-        to='/dashboard'
+        to='/ConnectToCallCenter'
         icon='/media/icons/duotune/art/art002.svg'
         title='اتصال به مرکز تماس'
         fontIcon='bi-app-indicator'

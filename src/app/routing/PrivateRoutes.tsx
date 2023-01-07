@@ -6,6 +6,7 @@ import {DashboardWrapper} from '../pages/dashboard/DashboardWrapper'
 import {getCSSVariableValue} from '../../_cloner/assets/ts/_utils'
 import {WithChildren} from '../../_cloner/helpers'
 import CustomerCallRegistration from '../pages/dashboard/CustomerCallRegistration'
+import ConnectToCallCenter from '../pages/dashboard/ConnectToCallCenter'
 
 const PrivateRoutes = () => {
   const ProfilePage = lazy(() => import('../modules/profile/ProfilePage'))
@@ -20,6 +21,7 @@ const PrivateRoutes = () => {
         {/* Pages */}
         <Route path='dashboard' element={<DashboardWrapper />} />
         <Route path='CustomerCallRegistration' element={<CustomerCallRegistration />} />
+        <Route path='ConnectToCallCenter' element={<ConnectToCallCenter />} />
         {/* Lazy Modules */}
         <Route
           path='crafted/pages/profile/*'

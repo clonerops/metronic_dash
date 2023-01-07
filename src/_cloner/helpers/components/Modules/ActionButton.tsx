@@ -13,7 +13,7 @@ const ActionButton: FC<IProps> = ({title}) => {
       <label className='font-IRANSans text-md inline-block w-[150px] pl-2 text-left' />
       <input
         type='submit'
-        value='جستجو'
+        value={title}
         className='font-IRANSans float-left m-0 inline-block w-[14rem] rounded-md border border-gray-400 bg-indigo-500 p-2 text-lg text-white outline-none'
       />
     </section>

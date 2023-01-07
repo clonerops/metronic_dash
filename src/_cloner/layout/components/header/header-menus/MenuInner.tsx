@@ -12,8 +12,6 @@ export function MenuInner() {
       <MenuItem title='امکانات' to='/dashboard' />
       <MenuItem title='مرکز مشتریان' to='/dashboard' />
       <MenuItem title='شرکت های زیر مجموعه' to='/dashboard' />
-      <MenuItem title='پیامها' to='/dashboard' />
-      <MenuItem title='جستجوی پیشرفته' to='/dashboard' />
     </>
   )
 }
