@@ -10,7 +10,7 @@ import {Card5} from '../../../_cloner/partials/content/cards/Card5'
 import initialValue from '../../../_cloner/helpers/value-helper/customer-registration.json'
 // import Guidance from '../../../_cloner/partials/guidance/Guidance'
 import ComplaintAndRequest from '../../../_cloner/partials/CR/ComplaintAndRequest'
-
+import CustomerCallHistory from '../../../_cloner/fakedata/customerhistorycall.json'
 const CustomerCallRegistration = () => {
   const [showModal, setShowModal] = useState<boolean>(false)
 
@@ -134,9 +134,9 @@ const CustomerCallRegistration = () => {
           </Card5>
         </div>
       </div>
-      {/* <section className='mt-5'>
-        <TablesWidget title='سوابق تماس مشتری' />
-      </section> */}
+      <section className='mt-5'>
+        <TablesWidget columns={CustomerCallHistory} title='سوابق تماس مشتری' />
+      </section>
       {/* submit Guidence Information Begin */}
       <section className='mt-5'>
         {/* <Guidance /> */}

@@ -1,22 +1,24 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react'
-import { toAbsoluteUrl } from '../AssetHelpers'
+import {toAbsoluteUrl} from '../AssetHelpers'
 import {KTSVG} from './KTSVG'
-import customerfieldinfo from '../../fakedata/customerfieldinfo.json'
+// import customerfieldinfo from '../../fakedata/customerfieldinfo.json'
+import {ITable} from '../../model/pieces'
 
 type Props = {
-  title: string,
+  title: string
   description?: string
+  columns?: ITable[]
 }
 
-const TablesWidget: React.FC<Props> = ({title, description}) => {
+const TablesWidget: React.FC<Props> = ({title, description, columns}) => {
   return (
     <div className={`card`}>
       {/* begin::Header */}
       <div className='card-header border-0 pt-5'>
         <h3 className='card-title align-items-start flex-column'>
           <span className='card-label fw-bold fs-3 mb-1'>{title}</span>
-          <span className='text-muted mt-1 fw-semibold fs-7'>{description}</span>
+          <span className='text-muted fw-semibold fs-7 mt-1'>{description}</span>
         </h3>
         <div className='card-toolbar'>
           {/* begin::Menu */}
@@ -126,17 +128,22 @@ const TablesWidget: React.FC<Props> = ({title, description}) => {
         {/* begin::Table container */}
         <div className='table-responsive'>
           {/* begin::Table */}
-          <table className='table align-middle gs-0 gy-4'>
+          <table className='gs-0 gy-4 table align-middle'>
             {/* begin::Table head */}
             <thead>
               <tr className='fw-bold text-muted bg-light'>
-                <th className='ps-4 min-w-300px rounded-start'>{customerfieldinfo.fullname}</th>
-                <th className='min-w-125px'>{customerfieldinfo.nationalcode}</th>
-                <th className='min-w-125px'>{customerfieldinfo.province}</th>
-                <th className='min-w-200px'>{customerfieldinfo.city}</th>
-                <th className='min-w-150px'>{customerfieldinfo.phone}</th>
-                <th className='min-w-150px'>{customerfieldinfo.mobile}</th>
-                <th className='min-w-150px'>{customerfieldinfo.address}</th>
+                {columns?.map((i) => (
+                  <th key={i.id} className='min-w-150px'>
+                    {i.name}
+                  </th>
+                ))}
+
+                {/* <th className='ps-4 min-w-300px rounded-start'>{}</th> */}
+                {/* <th className='min-w-125px'>{column.nationalcode}</th>
+                <th className='min-w-125px'>{column.province}</th>
+                <th className='min-w-200px'>{column.city}</th>
+                <th className='min-w-150px'>{column.mobile}</th>
+                <th className='min-w-150px'>{column.address}</th> */}
               </tr>
             </thead>
             {/* end::Table head */}
@@ -155,7 +162,7 @@ const TablesWidget: React.FC<Props> = ({title, description}) => {
                       </span>
                     </div>
                     <div className='d-flex justify-content-start flex-column'>
-                      <a href='#' className='text-dark fw-bold text-hover-primary mb-1 fs-6'>
+                      <a href='#' className='text-dark fw-bold text-hover-primary fs-6 mb-1'>
                         Brad Simmons
                       </a>
                       <span className='text-muted fw-semibold text-muted d-block fs-7'>
@@ -165,19 +172,19 @@ const TablesWidget: React.FC<Props> = ({title, description}) => {
                   </div>
                 </td>
                 <td>
-                  <a href='#' className='text-dark fw-bold text-hover-primary d-block mb-1 fs-6'>
+                  <a href='#' className='text-dark fw-bold text-hover-primary d-block fs-6 mb-1'>
                     $8,000,000
                   </a>
                   <span className='text-muted fw-semibold text-muted d-block fs-7'>Pending</span>
                 </td>
                 <td>
-                  <a href='#' className='text-dark fw-bold text-hover-primary d-block mb-1 fs-6'>
+                  <a href='#' className='text-dark fw-bold text-hover-primary d-block fs-6 mb-1'>
                     $5,400
                   </a>
                   <span className='text-muted fw-semibold text-muted d-block fs-7'>Paid</span>
                 </td>
                 <td>
-                  <a href='#' className='text-dark fw-bold text-hover-primary d-block mb-1 fs-6'>
+                  <a href='#' className='text-dark fw-bold text-hover-primary d-block fs-6 mb-1'>
                     Intertico
                   </a>
                   <span className='text-muted fw-semibold text-muted d-block fs-7'>
@@ -209,7 +216,7 @@ const TablesWidget: React.FC<Props> = ({title, description}) => {
                 <td className='text-end'>
                   <a
                     href='#'
-                    className='btn btn-bg-light btn-color-muted btn-active-color-primary btn-sm px-4 me-2'
+                    className='btn btn-bg-light btn-color-muted btn-active-color-primary btn-sm me-2 px-4'
                   >
                     View
                   </a>
@@ -234,7 +241,7 @@ const TablesWidget: React.FC<Props> = ({title, description}) => {
                       </span>
                     </div>
                     <div className='d-flex justify-content-start flex-column'>
-                      <a href='#' className='text-dark fw-bold text-hover-primary mb-1 fs-6'>
+                      <a href='#' className='text-dark fw-bold text-hover-primary fs-6 mb-1'>
                         Lebron Wayde
                       </a>
                       <span className='text-muted fw-semibold text-muted d-block fs-7'>
@@ -244,19 +251,19 @@ const TablesWidget: React.FC<Props> = ({title, description}) => {
                   </div>
                 </td>
                 <td>
-                  <a href='#' className='text-dark fw-bold text-hover-primary d-block mb-1 fs-6'>
+                  <a href='#' className='text-dark fw-bold text-hover-primary d-block fs-6 mb-1'>
                     $8,750,000
                   </a>
                   <span className='text-muted fw-semibold text-muted d-block fs-7'>Paid</span>
                 </td>
                 <td>
-                  <a href='#' className='text-dark fw-bold text-hover-primary d-block mb-1 fs-6'>
+                  <a href='#' className='text-dark fw-bold text-hover-primary d-block fs-6 mb-1'>
                     $7,400
                   </a>
                   <span className='text-muted fw-semibold text-muted d-block fs-7'>Paid</span>
                 </td>
                 <td>
-                  <a href='#' className='text-dark fw-bold text-hover-primary d-block mb-1 fs-6'>
+                  <a href='#' className='text-dark fw-bold text-hover-primary d-block fs-6 mb-1'>
                     Agoda
                   </a>
                   <span className='text-muted fw-semibold text-muted d-block fs-7'>
@@ -288,7 +295,7 @@ const TablesWidget: React.FC<Props> = ({title, description}) => {
                 <td className='text-end'>
                   <a
                     href='#'
-                    className='btn btn-bg-light btn-color-muted btn-active-color-primary btn-sm px-4 me-2'
+                    className='btn btn-bg-light btn-color-muted btn-active-color-primary btn-sm me-2 px-4'
                   >
                     View
                   </a>
@@ -313,7 +320,7 @@ const TablesWidget: React.FC<Props> = ({title, description}) => {
                       </span>
                     </div>
                     <div className='d-flex justify-content-start flex-column'>
-                      <a href='#' className='text-dark fw-bold text-hover-primary mb-1 fs-6'>
+                      <a href='#' className='text-dark fw-bold text-hover-primary fs-6 mb-1'>
                         Brad Simmons
                       </a>
                       <span className='text-muted fw-semibold text-muted d-block fs-7'>
@@ -323,19 +330,21 @@ const TablesWidget: React.FC<Props> = ({title, description}) => {
                   </div>
                 </td>
                 <td>
-                  <a href='#' className='text-dark fw-bold text-hover-primary d-block mb-1 fs-6'>
+                  <a href='#' className='text-dark fw-bold text-hover-primary d-block fs-6 mb-1'>
                     $8,000,000
                   </a>
-                  <span className='text-muted fw-semibold text-muted d-block fs-7'>In Proccess</span>
+                  <span className='text-muted fw-semibold text-muted d-block fs-7'>
+                    In Proccess
+                  </span>
                 </td>
                 <td>
-                  <a href='#' className='text-dark fw-bold text-hover-primary d-block mb-1 fs-6'>
+                  <a href='#' className='text-dark fw-bold text-hover-primary d-block fs-6 mb-1'>
                     $2,500
                   </a>
                   <span className='text-muted fw-semibold text-muted d-block fs-7'>Rejected</span>
                 </td>
                 <td>
-                  <a href='#' className='text-dark fw-bold text-hover-primary d-block mb-1 fs-6'>
+                  <a href='#' className='text-dark fw-bold text-hover-primary d-block fs-6 mb-1'>
                     RoadGee
                   </a>
                   <span className='text-muted fw-semibold text-muted d-block fs-7'>Paid</span>
@@ -365,7 +374,7 @@ const TablesWidget: React.FC<Props> = ({title, description}) => {
                 <td className='text-end'>
                   <a
                     href='#'
-                    className='btn btn-bg-light btn-color-muted btn-active-color-primary btn-sm px-4 me-2'
+                    className='btn btn-bg-light btn-color-muted btn-active-color-primary btn-sm me-2 px-4'
                   >
                     View
                   </a>
@@ -390,7 +399,7 @@ const TablesWidget: React.FC<Props> = ({title, description}) => {
                       </span>
                     </div>
                     <div className='d-flex justify-content-start flex-column'>
-                      <a href='#' className='text-dark fw-bold text-hover-primary mb-1 fs-6'>
+                      <a href='#' className='text-dark fw-bold text-hover-primary fs-6 mb-1'>
                         Natali Trump
                       </a>
                       <span className='text-muted fw-semibold text-muted d-block fs-7'>
@@ -400,19 +409,19 @@ const TablesWidget: React.FC<Props> = ({title, description}) => {
                   </div>
                 </td>
                 <td>
-                  <a href='#' className='text-dark fw-bold text-hover-primary d-block mb-1 fs-6'>
+                  <a href='#' className='text-dark fw-bold text-hover-primary d-block fs-6 mb-1'>
                     $700,000
                   </a>
                   <span className='text-muted fw-semibold text-muted d-block fs-7'>Pending</span>
                 </td>
                 <td>
-                  <a href='#' className='text-dark fw-bold text-hover-primary d-block mb-1 fs-6'>
+                  <a href='#' className='text-dark fw-bold text-hover-primary d-block fs-6 mb-1'>
                     $7,760
                   </a>
                   <span className='text-muted fw-semibold text-muted d-block fs-7'>Paid</span>
                 </td>
                 <td>
-                  <a href='#' className='text-dark fw-bold text-hover-primary d-block mb-1 fs-6'>
+                  <a href='#' className='text-dark fw-bold text-hover-primary d-block fs-6 mb-1'>
                     The Hill
                   </a>
                   <span className='text-muted fw-semibold text-muted d-block fs-7'>Insurance</span>
@@ -435,12 +444,14 @@ const TablesWidget: React.FC<Props> = ({title, description}) => {
                       <i className='bi bi-star-fill fs-5'></i>
                     </div>
                   </div>
-                  <span className='text-muted fw-semibold text-muted d-block fs-7 mt-1'>Avarage</span>
+                  <span className='text-muted fw-semibold text-muted d-block fs-7 mt-1'>
+                    Avarage
+                  </span>
                 </td>
                 <td className='text-end'>
                   <a
                     href='#'
-                    className='btn btn-bg-light btn-color-muted btn-active-color-primary btn-sm px-4 me-2'
+                    className='btn btn-bg-light btn-color-muted btn-active-color-primary btn-sm me-2 px-4'
                   >
                     View
                   </a>
@@ -465,7 +476,7 @@ const TablesWidget: React.FC<Props> = ({title, description}) => {
                       </span>
                     </div>
                     <div className='d-flex justify-content-start flex-column'>
-                      <a href='#' className='text-dark fw-bold text-hover-primary mb-1 fs-6'>
+                      <a href='#' className='text-dark fw-bold text-hover-primary fs-6 mb-1'>
                         Jessie Clarcson
                       </a>
                       <span className='text-muted fw-semibold text-muted d-block fs-7'>
@@ -475,19 +486,19 @@ const TablesWidget: React.FC<Props> = ({title, description}) => {
                   </div>
                 </td>
                 <td>
-                  <a href='#' className='text-dark fw-bold text-hover-primary d-block mb-1 fs-6'>
+                  <a href='#' className='text-dark fw-bold text-hover-primary d-block fs-6 mb-1'>
                     $1,320,000
                   </a>
                   <span className='text-muted fw-semibold text-muted d-block fs-7'>Pending</span>
                 </td>
                 <td>
-                  <a href='#' className='text-dark fw-bold text-hover-primary d-block mb-1 fs-6'>
+                  <a href='#' className='text-dark fw-bold text-hover-primary d-block fs-6 mb-1'>
                     $6,250
                   </a>
                   <span className='text-muted fw-semibold text-muted d-block fs-7'>Paid</span>
                 </td>
                 <td>
-                  <a href='#' className='text-dark fw-bold text-hover-primary d-block mb-1 fs-6'>
+                  <a href='#' className='text-dark fw-bold text-hover-primary d-block fs-6 mb-1'>
                     Intertico
                   </a>
                   <span className='text-muted fw-semibold text-muted d-block fs-7'>
@@ -519,7 +530,7 @@ const TablesWidget: React.FC<Props> = ({title, description}) => {
                 <td className='text-end'>
                   <a
                     href='#'
-                    className='btn btn-bg-light btn-color-muted btn-active-color-primary btn-sm px-4 me-2'
+                    className='btn btn-bg-light btn-color-muted btn-active-color-primary btn-sm me-2 px-4'
                   >
                     View
                   </a>

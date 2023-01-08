@@ -3,6 +3,7 @@ import ActionButton from "./Modules/ActionButton"
 import InputAndLabel from "./Modules/InputAndLabel"
 import SelectAndLabel from "./Modules/SelectAndLabel"
 import { TablesWidget } from "./TablesWidget"
+import pieceInformation from '../../fakedata/piece.json'
 
 const SaleServices = () => {
   return (
@@ -28,7 +29,7 @@ const SaleServices = () => {
             </section>
         </form>
         <section>
-            <TablesWidget title="" />
+            <TablesWidget columns={pieceInformation} title="" />
         </section>
     </Card5>
   )

@@ -1,9 +1,9 @@
 import {KTSVG} from '../../helpers'
+import CheckboxAndLabel from '../../helpers/components/Modules/CheckboxAndLabel'
 import InputAndLabel from '../../helpers/components/Modules/InputAndLabel'
 import SelectAndLabel from '../../helpers/components/Modules/SelectAndLabel'
 import TextareaAndInput from '../../helpers/components/Modules/TextareaAndInput'
 import SaleServices from '../../helpers/components/SaleServices'
-// import Tabs from '../../helpers/components/Tabs'
 import {Card5} from '../content/cards/Card5'
 
 const ComplaintAndRequest = () => {
@@ -42,6 +42,9 @@ const ComplaintAndRequest = () => {
         </section>
         <section className='flex flex-col'>
           <TextareaAndInput title='درخواست مشتری' />
+        </section>
+        <section className='flex flex-col'>
+          <CheckboxAndLabel title='آیا مشکل خودرو جزو ایرادات زیست محیطی بوده است؟' />
         </section>
       </section>
       <section className='grid grid-cols-1'>

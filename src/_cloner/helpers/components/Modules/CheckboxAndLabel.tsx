@@ -8,15 +8,15 @@ interface IProps {
 
 const CheckboxAndLabel: FC<IProps> = ({ title, defaultValue, disable }) => {
     return (
-        <section className="flex items-center p-2">
-            <label className="inline-block w-[150px] pl-2 text-left font-IRANSans text-xl">
-                {title}:
+        <section className="flex justify-start items-center w-full p-2">
+            <label className="inline-block text-left font-IRANSans px-8 text-md text-indigo-500">
+                {title}
             </label>
             <input
                 type="checkbox"
                 disabled={disable}
                 defaultValue={defaultValue}
-                className="float-left m-0 inline-block w-[4rem] rounded-md border border-gray-400 p-2 font-IRANSans text-lg outline-none"
+                className="inline-block border border-gray-400 px-8"
             />
         </section>
     );
