@@ -15,7 +15,7 @@ const SelectAndLabel: FC<IProps> = ({title, width = 'w-[14rem]'}) => {
         // name='status'
         // data-control='select2'
         // data-hide-search='true'
-        className={`form-select form-select-sm form-select-white p-2 ${width}`}
+        className={`form-select border border-gray-400 form-select-sm form-select-white p-2 ${width}`}
         defaultValue='Active'
       >
         <option value='Active'>راهنمایی</option>
