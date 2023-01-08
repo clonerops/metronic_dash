@@ -4,10 +4,11 @@ import Modal from '../../../_cloner/helpers/components/Modal'
 import ActionButton from '../../../_cloner/helpers/components/Modules/ActionButton'
 import InputAndLabel from '../../../_cloner/helpers/components/Modules/InputAndLabel'
 import SelectAndLabel from '../../../_cloner/helpers/components/Modules/SelectAndLabel'
-import TextareaAndInput from '../../../_cloner/helpers/components/Modules/TextareaAndInput'
+// import TextareaAndInput from '../../../_cloner/helpers/components/Modules/TextareaAndInput'
 import {TablesWidget} from '../../../_cloner/helpers/components/TablesWidget'
 import {Card5} from '../../../_cloner/partials/content/cards/Card5'
 import initialValue from '../../../_cloner/helpers/value-helper/customer-registration.json'
+import Guidance from '../../../_cloner/partials/guidance/Guidance'
 
 const CustomerCallRegistration = () => {
   const [showModal, setShowModal] = useState<boolean>(false)
@@ -29,16 +30,13 @@ const CustomerCallRegistration = () => {
 
   return (
     <>
-      <div className='card container p-5 shadow-lg'>
+      <Card5 title='جستجوی مشتری' image='/media/svg/brand-logos/aven.svg'>
         {/* Customer Call Number */}
-        <section className='flex items-center justify-start py-5'>
-          <label className='px-2'>شماره تماس گیرنده:</label>
-          <h4 className='px-2 font-VazirBold'>09197563415</h4>
-        </section>
-        {/* Call Registration Action Begin */}
-        <section>
+        <section className='grid grid-cols-2 md:grid-cols-3'>
+          <InputAndLabel title='شماره تماس گیرنده' disable />
           <SelectAndLabel title='موضوع تماس' />
         </section>
+        {/* Call Registration Action Begin */}
         <form
           className='grid w-full grid-cols-2 md:grid-cols-3'
           onSubmit={(e) => SearchCustomer(e)}
@@ -64,7 +62,7 @@ const CustomerCallRegistration = () => {
           </section>
         </form>
         {/* Call Registration Action End */}
-      </div>
+      </Card5>
       {/* Customer Information Begin */}
       <div className='row g-6 g-xl-2 mt-5'>
         <div className='col-sm-6 col-xl-4'>
@@ -72,6 +70,9 @@ const CustomerCallRegistration = () => {
             <form className='container grid grid-cols-1'>
               <section className='flex flex-col'>
                 <InputAndLabel title='نام' />
+              </section>
+              <section className='flex flex-col'>
+                <InputAndLabel title='نام خانوادگی' />
               </section>
               <section className='flex flex-col'>
                 <InputAndLabel title='کدملی' />
@@ -87,9 +88,6 @@ const CustomerCallRegistration = () => {
               </section>
               <section className='flex flex-col'>
                 <InputAndLabel title='تلفن همراه' />
-              </section>
-              <section className='flex flex-col'>
-                <TextareaAndInput title='توضیحات' />
               </section>
             </form>
           </Card5>
@@ -135,11 +133,11 @@ const CustomerCallRegistration = () => {
           </Card5>
         </div>
       </div>
-      {/* Customer Information End */}
-      {/* <Dialog>
-        <TablesWidget title='خودروها' />
-        <TablesWidget title='خودروها' />
-      </Dialog> */}
+
+      <section className='mt-5'>
+        <Guidance />
+      </section>
+
       <Modal showModal={showModal} setShowModal={setShowModal}>
         <TablesWidget title='خودروها' />
       </Modal>

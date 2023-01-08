@@ -28,7 +28,7 @@ const Card5: FC<Props> = ({
 }) => {
   return (
     <div className='card h-100 shadow-lg'>
-      <div className='card-header flex-nowrap border-0 pt-9'>
+      <div className='card-header flex-nowrap border-0 pt-1'>
         <div className='card-title m-0'>
           <div className='symbol symbol-45px w-45px bg-light me-5'>
             <img src={toAbsoluteUrl(image)} alt='Metronic' className='p-3' />
@@ -57,7 +57,7 @@ const Card5: FC<Props> = ({
         </div>
       </div>
 
-      <div className='card-body d-flex flex-column px-9 pt-6 pb-8'>
+      <div className='card-body d-flex flex-column px-9 pt-1 pb-4'>
         {children}
       </div>
     </div>
